@@ -1,0 +1,34 @@
+# official
+2024-08-18 15:10:18,827 - INFO - Image: data/LOLv1/Test/input/1.png, PSNR: 19.5372, SSIM: 0.8468
+2024-08-18 15:10:18,996 - INFO - Image: data/LOLv1/Test/input/22.png, PSNR: 26.2666, SSIM: 0.8779
+2024-08-18 15:10:19,159 - INFO - Image: data/LOLv1/Test/input/23.png, PSNR: 25.4462, SSIM: 0.8376
+2024-08-18 15:10:19,324 - INFO - Image: data/LOLv1/Test/input/55.png, PSNR: 21.3961, SSIM: 0.8678
+2024-08-18 15:10:19,487 - INFO - Image: data/LOLv1/Test/input/79.png, PSNR: 27.0763, SSIM: 0.9066
+2024-08-18 15:10:19,648 - INFO - Image: data/LOLv1/Test/input/111.png, PSNR: 23.3334, SSIM: 0.9089
+2024-08-18 15:10:19,810 - INFO - Image: data/LOLv1/Test/input/146.png, PSNR: 25.3003, SSIM: 0.8781
+2024-08-18 15:10:19,972 - INFO - Image: data/LOLv1/Test/input/179.png, PSNR: 28.9189, SSIM: 0.8620
+2024-08-18 15:10:20,140 - INFO - Image: data/LOLv1/Test/input/493.png, PSNR: 22.5731, SSIM: 0.6912
+2024-08-18 15:10:20,306 - INFO - Image: data/LOLv1/Test/input/547.png, PSNR: 23.0393, SSIM: 0.8626
+2024-08-18 15:10:20,468 - INFO - Image: data/LOLv1/Test/input/665.png, PSNR: 27.2624, SSIM: 0.7992
+2024-08-18 15:10:20,638 - INFO - Image: data/LOLv1/Test/input/669.png, PSNR: 26.7319, SSIM: 0.8788
+2024-08-18 15:10:20,804 - INFO - Image: data/LOLv1/Test/input/748.png, PSNR: 28.3694, SSIM: 0.8938
+2024-08-18 15:10:20,977 - INFO - Image: data/LOLv1/Test/input/778.png, PSNR: 23.0910, SSIM: 0.7751
+2024-08-18 15:10:21,148 - INFO - Image: data/LOLv1/Test/input/780.png, PSNR: 28.9823, SSIM: 0.7955
+
+
+# my
+2024-08-18 17:23:55,008 - INFO - Image: data/LOLv1/Test/input/1.png, PSNR: 25.6338, SSIM: 0.8708
+2024-08-18 17:23:55,195 - INFO - Image: data/LOLv1/Test/input/22.png, PSNR: 24.8867, SSIM: 0.8502
+2024-08-18 17:23:55,375 - INFO - Image: data/LOLv1/Test/input/23.png, PSNR: 19.3424, SSIM: 0.7876
+2024-08-18 17:23:55,546 - INFO - Image: data/LOLv1/Test/input/55.png, PSNR: 19.2568, SSIM: 0.8056
+2024-08-18 17:23:55,727 - INFO - Image: data/LOLv1/Test/input/79.png, PSNR: 22.3451, SSIM: 0.8833
+2024-08-18 17:23:55,900 - INFO - Image: data/LOLv1/Test/input/111.png, PSNR: 18.4459, SSIM: 0.8722
+2024-08-18 17:23:56,073 - INFO - Image: data/LOLv1/Test/input/146.png, PSNR: 26.5579, SSIM: 0.8721
+2024-08-18 17:23:56,237 - INFO - Image: data/LOLv1/Test/input/179.png, PSNR: 18.5082, SSIM: 0.7668
+2024-08-18 17:23:56,394 - INFO - Image: data/LOLv1/Test/input/493.png, PSNR: 15.9424, SSIM: 0.5947
+2024-08-18 17:23:56,548 - INFO - Image: data/LOLv1/Test/input/547.png, PSNR: 16.1108, SSIM: 0.7783
+2024-08-18 17:23:56,702 - INFO - Image: data/LOLv1/Test/input/665.png, PSNR: 26.1225, SSIM: 0.7706
+2024-08-18 17:23:56,855 - INFO - Image: data/LOLv1/Test/input/669.png, PSNR: 26.1386, SSIM: 0.8407
+2024-08-18 17:23:57,009 - INFO - Image: data/LOLv1/Test/input/748.png, PSNR: 22.2172, SSIM: 0.8527
+2024-08-18 17:23:57,163 - INFO - Image: data/LOLv1/Test/input/778.png, PSNR: 23.4033, SSIM: 0.7545
+2024-08-18 17:23:57,318 - INFO - Image: data/LOLv1/Test/input/780.png, PSNR: 22.0650, SSIM: 0.7355

@@ -2,6 +2,8 @@
 # LLEN-SLAM
 基于弱光增强的SLAM
 
+> updatetime : 2024/8/19 23:00
+
 ## 💡 News 新闻
 
 
@@ -37,19 +39,19 @@ conda activate LLEN
 (2) Clone Repo
 
 ```bash
-git clone git@github.com:
+git clone https://github.com/suiuko/LLEN-SLAM.git
 ```
 
 (3) Install Dependencies
 
 ```bash
-cd 
+cd LLEN-SLAM
 pip install -r requirements.txt
 ```
 
 ### Data Preparation
 
-You can refer to the following links to download the datasets. Note that we only use `low_blur` and `high_sharp_scaled` subsets of `LOL-Blur` dataset.
+Currently only the LOLv1 database is tested
 
 - [LOLv1](https://daooshee.github.io/BMVC2018website/)
 
