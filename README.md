@@ -16,12 +16,30 @@
 
 ## 🖼 Visual Comparison 视觉比较
 
+![P_com](./f_result/Photo_comparison.jpg)
+
 
 ## 🧾 Weights and Results 
 
+### Ours
+
 | Folder (test datasets)                        | PSNR        | SSIM       | LPIPS      | GT Mean | Results                                                      | Weights Path             |
 | --------------------------------------------- | ----------- | ---------- | ---------- | ------- | ------------------------------------------------------------ | ------------------------ |
-| (LOLv1)<br />v1 w perc loss/ wo gt mean       | 20.9049     |  0.7718    | **   **    |         |   | LOLv1/perc.pth         |
+| (LOLv1)<br />v1        | 20.9049     |  0.7718    | **   **    |         |   | LOLv1/net_g_1500.pth         |
+
+### Compare LOLv1 datasets
+
+It should be noted that the following assessment is not fine-tuned and is conducted directly after training.
+
+|   Model name       | PSNR        | SSIM        | LPIPS      | GT Mean    | Results | Weights Path             |
+| --------------------------------------------- | ----------- | ---------- | ---------- | ------- | ----------------------------------------- | ------------------------ |
+| **Ours_v1**        | 20.9049     |  0.7718    |   X         |    X       |    -    | LOLv1/net_g_1500.pth         |
+| HVI-CIDNet       	 | 21.61       |  0.793     | 0.217       |     X      |    -    |  LOLv1\My_model\epoch_best.pth  |
+| retinexformer      | 21.798      |  0.802     | X           |      X     |     -   |  LOLv1\My_model\best_psnr_21.96_27000.pth  |
+| URetinex-Net       | 21.32(Official) |     X      | X           |      X     |     -   |  LOLv1\Official_model\ckpt  |
+| GlobalDiff       | X |     X      | X           |      X     |     -   |  LOLv1\My_model  |
+| KinD       | X |     X      | X           |      X     |     -   |  LOLv1\My_model  |
+| KinD++       | X |     X      | X           |      X     |     -   |  LOLv1\My_model  |
 
 ## 🌑 0. My environment
 
