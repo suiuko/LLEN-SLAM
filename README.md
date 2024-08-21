@@ -37,9 +37,9 @@ It should be noted that the following assessment is not fine-tuned and is conduc
 | HVI-CIDNet       	 | 21.61       |  0.793     | 0.217       |     X      |    -    |  LOLv1\My_model\epoch_best.pth  |
 | retinexformer      | 21.798      |  0.802     | X           |      X     |     -   |  LOLv1\My_model\best_psnr_21.96_27000.pth  |
 | URetinex-Net       | 21.32(Official) |     X      | X           |      X     |     -   |  LOLv1\Official_model\ckpt  |
-| GlobalDiff       | X |     X      | X           |      X     |     -   |  LOLv1\My_model  |
-| KinD       | X |     X      | X           |      X     |     -   |  LOLv1\My_model  |
-| KinD++       | X |     X      | X           |      X     |     -   |  LOLv1\My_model  |
+| GlobalDiff       | 27.625|     0.874      | 0.0912           |      X     |     -   |  ~~LOLv1\My_model~~  |
+| KinD       | X |     X      | X           |      X     |     -   |  ~~LOLv1\My_model~~  |
+| KinD++       | X |     X      | X           |      X     |     -   |  ~~LOLv1\My_model~~  |
 
 ## 🌑 0. My environment
 
@@ -102,7 +102,7 @@ Currently only the LOLv1 database is tested
 
 ```bash
 # activate the enviroment
-conda activate Retinexformer
+conda activate LLEN
 
 # LOL-v1
 python3 basicsr/train.py --opt Options/LOL_v1.yml
