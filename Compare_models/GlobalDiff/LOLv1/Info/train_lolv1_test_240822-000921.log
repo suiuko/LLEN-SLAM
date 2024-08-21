@@ -1,14 +1,14 @@
-24-08-21 16:14:10.574 - INFO:   name: lolv1_test
+24-08-22 00:09:21.573 - INFO:   name: lolv1_test
   phase: test
   gpu_ids: [0]
   seed: 4088
   path:[
-    log: experiments/lolv1_test_240821_161410/logs
-    tb_logger: experiments/lolv1_test_240821_161410/tb_logger
-    results: experiments/lolv1_test_240821_161410/results
-    checkpoint: experiments/lolv1_test_240821_161410/checkpoint
+    log: experiments/lolv1_test_240822_000921/logs
+    tb_logger: experiments/lolv1_test_240822_000921/tb_logger
+    results: experiments/lolv1_test_240822_000921/results
+    checkpoint: experiments/lolv1_test_240822_000921/checkpoint
     resume_state: ./checkpoints/lolv1_gen.pth
-    experiments_root: experiments/lolv1_test_240821_161410
+    experiments_root: experiments/lolv1_test_240822_000921
   ]
   model:[
     which_model_G: ddpm
@@ -65,8 +65,8 @@
   uncertainty_train: False
   dist: False
 
-24-08-21 16:14:10.574 - INFO: Seed: 4088
-24-08-21 16:14:14.770 - INFO: GaussianDiffusion(
+24-08-22 00:09:21.574 - INFO: Seed: 4088
+24-08-22 00:09:25.916 - INFO: GaussianDiffusion(
   (denoise_fn): UNet(
     (noise_level_mlp): Sequential(
       (0): PositionalEncoding()
@@ -968,6 +968,6 @@
   )
   (loss_func): L1Loss()
 )
-24-08-21 16:14:14.774 - INFO: Network G structure: DataParallel - GaussianDiffusion, with parameters: 17,434,182
-24-08-21 16:14:14.775 - INFO: Model [DDPM] is created.
-24-08-21 16:14:14.775 - INFO: Initial Model Finished
+24-08-22 00:09:25.922 - INFO: Network G structure: DataParallel - GaussianDiffusion, with parameters: 17,434,182
+24-08-22 00:09:25.923 - INFO: Model [DDPM] is created.
+24-08-22 00:09:25.923 - INFO: Initial Model Finished
