@@ -1,0 +1,20 @@
+Image Pair, PSNR, SSIM, LPIPS
+10_gt.png vs 10_lq_KinD_plus.png, 12.2033, 0.2976, 0.2693
+11_gt.png vs 11_lq_KinD_plus.png, 17.1816, 0.5894, 0.1857
+12_gt.png vs 12_lq_KinD_plus.png, 14.6339, 0.4623, 0.2259
+13_gt.png vs 13_lq_KinD_plus.png, 13.8648, 0.5215, 0.2922
+14_gt.png vs 14_lq_KinD_plus.png, 15.4085, 0.5906, 0.2508
+15_gt.png vs 15_lq_KinD_plus.png, 12.0372, 0.5066, 0.2393
+1_gt.png vs 1_lq_KinD_plus.png, 20.2145, 0.5435, 0.3594
+2_gt.png vs 2_lq_KinD_plus.png, 15.0540, 0.4923, 0.2289
+3_gt.png vs 3_lq_KinD_plus.png, 18.5490, 0.4725, 0.2487
+4_gt.png vs 4_lq_KinD_plus.png, 17.0324, 0.6611, 0.1901
+5_gt.png vs 5_lq_KinD_plus.png, 17.4097, 0.6184, 0.2046
+6_gt.png vs 6_lq_KinD_plus.png, 16.5120, 0.3290, 0.3438
+7_gt.png vs 7_lq_KinD_plus.png, 13.9125, 0.4875, 0.2034
+8_gt.png vs 8_lq_KinD_plus.png, 16.1640, 0.5130, 0.2396
+9_gt.png vs 9_lq_KinD_plus.png, 14.5823, 0.5336, 0.3506
+
+Average PSNR: 15.6506
+Average SSIM: 0.5079
+Average LPIPS: 0.2555

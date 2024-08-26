@@ -1,0 +1,2 @@
+diffusion 60000
+epoch:834, iter:  50,000
