@@ -4,8 +4,6 @@
 
 ![P_com](./f_result/3.png)
 
-> updatetime : 2024/8/29 16:10
-
 
 ## 💡 News 新闻
 
@@ -19,7 +17,7 @@
 
 ## 🖼 Visual Comparison 视觉比较
 
-<embed src="./f_result/1.pdf" type="application/pdf" />
+![P_com1](./f_result/1.png)
 
 
 ## 🧾 Weights and Results 
