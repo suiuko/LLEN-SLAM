@@ -2,7 +2,10 @@
 # LLEN-SLAM
 基于弱光增强的SLAM
 
-> updatetime : 2024/8/26 01:58
+![P_com](./f_result/3.png)
+
+> updatetime : 2024/8/29 16:10
+
 
 ## 💡 News 新闻
 
@@ -16,7 +19,7 @@
 
 ## 🖼 Visual Comparison 视觉比较
 
-![P_com](./f_result/Photo_comparison.jpg)
+<embed src="./f_result/1.pdf" type="application/pdf" />
 
 
 ## 🧾 Weights and Results 
@@ -38,8 +41,8 @@ It should be noted that the following assessment is not fine-tuned and is conduc
 | retinexformer      | 21.798    	  |  0.802     | X           |      X      |  LOLv1\My_model\best_psnr_21.96_27000.pth  |
 | URetinex-Net       | 21.32(Official) |     X      | X           |      X     |  LOLv1\Official_model\ckpt  |
 | GlobalDiff     	  | 27.623(Official)|  0.874     |   0.0912    |      X    |  ~~LOLv1\My_model~~  |
-| KinD      		 | X 				|     X      | X           |      X    |  ~~LOLv1\My_model~~  |
-| KinD++     		  | X 				|     X      | X           |      X    |  ~~LOLv1\My_model~~  |
+| LYT—NET     		 | 25.4462 	|   0.8307    | X           |      X    |  ~~LOLv1\My_model~~  |
+| KinD++     		  |  X	|     X      | X           |      X    |  ~~LOLv1\My_model~~  |
 
 
 You can get pth on [Google drive](https://drive.google.com/drive/folders/1L7V2KOsgav5qFgU4CzwiNcC_OBz2OeQK?usp=sharing)
@@ -52,7 +55,7 @@ You can get pth on [Google drive](https://drive.google.com/drive/folders/1L7V2KO
 | retinexformer      | 25.154    	  |  0.8445     | X           |      X      | 
 | URetinex-Net       | 21.32 |     X      | X           |      X     | 
 | GlobalDiff     	  | 27.623|  0.874     |   0.0912    |      X    | 
-| KinD      		 | X 				|     X      | X           |      X    | 
+| LYT—NET      		 | 26.6280 |   0.8349    | X           |      X    | 
 | KinD++     		  | X 				|     X      | X           |      X    | 
 
 ### Training log
@@ -62,8 +65,8 @@ You can get pth on [Google drive](https://drive.google.com/drive/folders/1L7V2KO
 | HVI-CIDNet       	|    epoch:1000    			|    
 | retinexformer     |     epoch:683 & iter:41K   |   
 | URetinex-Net      |     -   					|   
-| GlobalDiff     	|    First training 60K;Second training 100K    |    
-| KinD      		|     -  					 |    
+| GlobalDiff     	|    First training 60K;Second training 1000K    |    
+| LYT—NET    		|     epoch:1500  		|    
 | KinD++     		|  			-			    |  
 
 
