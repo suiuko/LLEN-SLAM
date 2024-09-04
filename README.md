@@ -7,7 +7,7 @@
 
 ## 💡 News 新闻
 
-
+- **2024.09.03** 🌟 The first version completed training and testing, PSNR: 25.441431, SSIM: 0.824064. The input conversion to LAB is done in this version. Good results were achieved.
 - **2024.08.19** The initial model was completed, and compared with different low-light models, the effect was only 20.9. Other models were tested simultaneously (avg:21.5), with a difference of 0.6 points.
 - **2024.08.08** project startup 🎈
 
@@ -26,7 +26,7 @@
 
 | Folder (test datasets)                        | PSNR        | SSIM       | LPIPS      | GT Mean | Results                                                      | Weights Path             |
 | --------------------------------------------- | ----------- | ---------- | ---------- | ------- | ------------------------------------------------------------ | ------------------------ |
-| (LOLv1)<br />v1        | 20.9049     |  0.7718    | **   **    |         |   | LOLv1/net_g_1500.pth         |
+| (LOLv1)<br />v1        | 25.441431     |  0.824064   | **   **    |         |   | LOLv1.pth         |
 
 ### Compare LOLv1 datasets
 
@@ -34,7 +34,7 @@ It should be noted that the following assessment is not fine-tuned and is conduc
 
 |   Model name       | PSNR        | SSIM        | LPIPS      | GT Mean     | 			Weights Path       |
 | --------------------------------------------- | ----------- | ---------- | ---------- | -------  | ------------------------ |
-| **Ours_v1**        | 20.9049   	  |  0.7718    |   X         |    X        | LOLv1/net_g_1500.pth         |
+| **Ours_v1**        | 25.441431   	  |  0.824064    |   X         |    X        | LOLv1/net_g_1500.pth         |
 | HVI-CIDNet       	 | 21.61     	  |  0.793     | 0.217       |     X       |  LOLv1\My_model\epoch_best.pth  |
 | retinexformer      | 21.798    	  |  0.802     | X           |      X      |  LOLv1\My_model\best_psnr_21.96_27000.pth  |
 | URetinex-Net       | 21.32(Official) |     X      | X           |      X     |  LOLv1\Official_model\ckpt  |
