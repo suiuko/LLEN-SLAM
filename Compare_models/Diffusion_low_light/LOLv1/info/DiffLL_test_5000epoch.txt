@@ -1,0 +1,20 @@
+Image Pair, PSNR, SSIM, LPIPS
+1.png vs low_1.png, 22.4745, 0.8688, 0.1132
+111.png vs low_111.png, 14.7956, 0.8483, 0.1445
+146.png vs low_146.png, 23.8384, 0.8827, 0.1067
+179.png vs low_179.png, 15.4977, 0.7200, 0.1533
+22.png vs low_22.png, 26.7810, 0.8643, 0.1580
+23.png vs low_23.png, 22.9217, 0.8043, 0.2644
+493.png vs low_493.png, 13.9572, 0.5486, 0.3120
+547.png vs low_547.png, 15.4295, 0.8137, 0.1758
+55.png vs low_55.png, 18.4629, 0.8347, 0.1989
+665.png vs low_665.png, 26.4100, 0.7987, 0.2485
+669.png vs low_669.png, 23.5294, 0.8571, 0.1727
+748.png vs low_748.png, 27.5855, 0.8774, 0.1350
+778.png vs low_778.png, 21.1159, 0.7082, 0.2490
+780.png vs low_780.png, 20.1292, 0.7455, 0.1390
+79.png vs low_79.png, 31.8369, 0.9123, 0.0813
+
+Average PSNR: 21.6510
+Average SSIM: 0.8056
+Average LPIPS: 0.1768

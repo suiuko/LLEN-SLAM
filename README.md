@@ -38,32 +38,34 @@ It should be noted that the following assessment is not fine-tuned and is conduc
 | HVI-CIDNet       	 | 21.61     	  |  0.793     | 0.217       |     X       |  LOLv1\My_model\epoch_best.pth  |
 | retinexformer      | 21.798    	  |  0.802     | X           |      X      |  LOLv1\My_model\best_psnr_21.96_27000.pth  |
 | URetinex-Net       | 21.32(Official) |     X      | X           |      X     |  LOLv1\Official_model\ckpt  |
-| GlobalDiff     	  | 27.623(Official)|  0.874     |   0.0912    |      X    |  ~~LOLv1\My_model~~  |
+| GASD     	  | 26.232 |  0.8519     |   X    |      X    |  ~~LOLv1\My_model~~  |
 | LYT—NET     		 | 25.4462 	|   0.8307    | X           |      X    |  ~~LOLv1\My_model~~  |
 | KinD++     		  |  X	|     X      | X           |      X    |  ~~LOLv1\My_model~~  |
+| Diffusion Low Light   |  21.651	|     0.8056      | 0.1768           |      X    |  ~~LOLv1\My_model~~  |
 
 
 You can get pth on [Google drive](https://drive.google.com/drive/folders/1L7V2KOsgav5qFgU4CzwiNcC_OBz2OeQK?usp=sharing)
 ### Compare LOLv1 datasets official numerical value
 
 |   Model name       | PSNR        | SSIM        | LPIPS      | GT Mean     | 
-| --------------------------------------------- | ----------- | ---------- | ---------- |
+| --------------------------------------------- | ----------- | ---------- | ---------- |---------- |
 | **Ours_v1**        | 20.9049   	  |  0.7718    |   X         |    X        | 
 | HVI-CIDNet       	 | 23.500     	  |  0.8703     | 0.1053       |     X       |  
 | retinexformer      | 25.154    	  |  0.8445     | X           |      X      | 
 | URetinex-Net       | 21.32 |     X      | X           |      X     | 
-| GlobalDiff     	  | 27.623|  0.874     |   0.0912    |      X    | 
+| GSAD     	  | 27.623|  0.874     |   0.0912    |      X    | 
 | LYT—NET      		 | 26.6280 |   0.8349    | X           |      X    | 
-| KinD++     		  | X 				|     X      | X           |      X    | 
+| KinD++     		  | 15.6506  |     0.5079   |    0.2555    |      X    | 
+| Diffusion Low Light   |  26.047	|     0.8445      | 0.1184           |      X    |
 
 ### Training log
 |   Model name      |           comment			 |  
 | ----------------- | ------------------------   |
-| **Ours_v1**       |    iter:1500    			|       
+| **Ours_v1**       |    epoch:1500    			|       
 | HVI-CIDNet       	|    epoch:1000    			|    
 | retinexformer     |     epoch:683 & iter:41K   |   
 | URetinex-Net      |     -   					|   
-| GlobalDiff     	|    First training 60K;Second training 1000K    |    
+| GSAD     	|    First training 1000K;Second training 2000K    |    
 | LYT—NET    		|     epoch:1500  		|    
 | KinD++     		|  			-			    |  
 
@@ -81,13 +83,13 @@ Log files are stored in `./Compare_models/ different models/ LOLv1/info`
 
 ## 🌑 1. Get Started 
 
-- Python 3.7.0
-- Pytorch 1.11.1
+- Python 3.9
+- pytorch-cuda=11.8
 
 (1) Create Conda Environment
 
 ```bash
-conda create --name LLEN python=3.7.0
+conda create --name LLEN python=3.9 -y
 conda activate LLEN
 ```
 
