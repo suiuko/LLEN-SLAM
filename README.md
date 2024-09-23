@@ -7,6 +7,10 @@
 
 ## 💡 News 新闻
 
+- **2024.09.23** V2.1.1 version in epoch150, PSNR:25.5085, SSIM:0.8311
+- **2024.09.21** V2.0-6variate version in epoch150, PSNR:25.429, SSIM:0.8292
+- **2024.09.18** V1.5 version in epoch150, PSNR:25.39
+- **2024.09.15** V1.4 version in epoch150, PSNR:24.97, SSIM:0.811
 - **2024.09.03** 🌟 The first version completed training and testing, PSNR: 25.441431, SSIM: 0.824064. The input conversion to LAB is done in this version. Good results were achieved.
 - **2024.08.19** The initial model was completed, and compared with different low-light models, the effect was only 20.9. Other models were tested simultaneously (avg:21.5), with a difference of 0.6 points.
 - **2024.08.08** project startup 🎈
@@ -40,7 +44,7 @@ It should be noted that the following assessment is not fine-tuned and is conduc
 | URetinex-Net       | 21.32(Official) |     X      | X           |      X     |  LOLv1\Official_model\ckpt  |
 | GASD     	  | 26.232 |  0.8519     |   X    |      X    |  ~~LOLv1\My_model~~  |
 | LYT—NET     		 | 25.4462 	|   0.8307    | X           |      X    |  ~~LOLv1\My_model~~  |
-| KinD++     		  |  X	|     X      | X           |      X    |  ~~LOLv1\My_model~~  |
+| KinD++     		  |  15.6506	|     0.5079      | 0.2555           |      X    |  ~~LOLv1\My_model~~  |
 | Diffusion Low Light   |  21.651	|     0.8056      | 0.1768           |      X    |  ~~LOLv1\My_model~~  |
 
 
@@ -55,7 +59,7 @@ You can get pth on [Google drive](https://drive.google.com/drive/folders/1L7V2KO
 | URetinex-Net       | 21.32 |     X      | X           |      X     | 
 | GSAD     	  | 27.623|  0.874     |   0.0912    |      X    | 
 | LYT—NET      		 | 26.6280 |   0.8349    | X           |      X    | 
-| KinD++     		  | 15.6506  |     0.5079   |    0.2555    |      X    | 
+| KinD++     		  |  X |    X    |     X   |      X    | 
 | Diffusion Low Light   |  26.047	|     0.8445      | 0.1184           |      X    |
 
 ### Training log

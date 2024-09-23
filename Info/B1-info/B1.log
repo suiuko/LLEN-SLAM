@@ -1,0 +1,213 @@
+2024-09-12 17:37:48,395 INFO: 
+                ____                _       _____  ____
+               / __ ) ____ _ _____ (_)_____/ ___/ / __ \
+              / __  |/ __ `// ___// // ___/\__ \ / /_/ /
+             / /_/ // /_/ /(__  )/ // /__ ___/ // _, _/
+            /_____/ \__,_//____//_/ \___//____//_/ |_|
+     ______                   __   __                 __      __
+    / ____/____   ____   ____/ /  / /   __  __ _____ / /__   / /
+   / / __ / __ \ / __ \ / __  /  / /   / / / // ___// //_/  / /
+  / /_/ // /_/ // /_/ // /_/ /  / /___/ /_/ // /__ / /<    /_/
+  \____/ \____/ \____/ \____/  /_____/\____/ \___//_/|_|  (_)
+    
+Version Information: 
+	BasicSR: 1.2.0+cc63400
+	PyTorch: 1.11.0
+	TorchVision: 0.12.0
+2024-09-12 17:37:48,395 INFO: 
+  name: 1_LOL_v1
+  model_type: ImageCleanModel
+  scale: 1
+  num_gpu: 1
+  manual_seed: 100
+  datasets:[
+    train:[
+      name: TrainSet
+      type: Dataset_PairedImage
+      dataroot_gt: data/LOLv1/Train/target
+      dataroot_lq: data/LOLv1/Train/input
+      geometric_augs: True
+      filename_tmpl: {}
+      io_backend:[
+        type: disk
+      ]
+      use_shuffle: True
+      num_worker_per_gpu: 8
+      batch_size_per_gpu: 8
+      mini_batch_sizes: [1]
+      iters: [300000]
+      gt_size: 128
+      gt_sizes: [128]
+      dataset_enlarge_ratio: 1
+      prefetch_mode: None
+      phase: train
+      scale: 1
+    ]
+    val:[
+      name: ValSet
+      type: Dataset_PairedImage
+      dataroot_gt: data/LOLv1/Test/target
+      dataroot_lq: data/LOLv1/Test/input
+      io_backend:[
+        type: disk
+      ]
+      phase: val
+      scale: 1
+    ]
+  ]
+  network_g:[
+    type: 1
+    in_channels: 3
+    out_channels: 3
+    n_feat: 40
+    stage: 1
+    num_blocks: [1, 2, 2]
+  ]
+  path:[
+    pretrain_network_g: None
+    strict_load_g: True
+    resume_state: experiments111/1_LOL_v1/training_states/1000.state
+    root: /home/zgj/code2/B1/1-master
+    experiments_root: /home/zgj/code2/B1/1-master/experiments111/1_LOL_v1
+    models: /home/zgj/code2/B1/1-master/experiments111/1_LOL_v1/models
+    training_states: /home/zgj/code2/B1/1-master/experiments111/1_LOL_v1/training_states
+    log: /home/zgj/code2/B1/1-master/experiments111/1_LOL_v1
+    visualization: /home/zgj/code2/B1/1-master/experiments111/1_LOL_v1/visualization
+  ]
+  train:[
+    total_iter: 15000
+    warmup_iter: -1
+    use_grad_clip: True
+    scheduler:[
+      type: CosineAnnealingRestartCyclicLR
+      periods: [46000, 104000]
+      restart_weights: [1, 1]
+      eta_mins: [0.0003, 1e-06]
+    ]
+    mixing_augs:[
+      mixup: True
+      mixup_beta: 1.2
+      use_identity: True
+    ]
+    optim_g:[
+      type: Adam
+      lr: 0.0002
+      betas: [0.9, 0.999]
+    ]
+    pixel_opt:[
+      type: L1Loss
+      loss_weight: 1
+      reduction: mean
+    ]
+  ]
+  val:[
+    window_size: 4
+    val_freq: 1000.0
+    save_img: False
+    rgb2bgr: True
+    use_image: False
+    max_minibatch: 8
+    metrics:[
+      psnr:[
+        type: calculate_psnr
+        crop_border: 0
+        test_y_channel: False
+      ]
+    ]
+  ]
+  logger:[
+    print_freq: 500
+    save_checkpoint_freq: 1000.0
+    use_tb_logger: True
+    wandb:[
+      project: low_light
+      resume_id: None
+    ]
+  ]
+  dist_params:[
+    backend: nccl
+    port: 29500
+  ]
+  is_train: True
+  dist: False
+  rank: 0
+  world_size: 1
+
+2024-09-12 17:37:48,568 INFO: Dataset Dataset_PairedImage - TrainSet is created.
+2024-09-12 17:37:48,568 INFO: Training statistics:
+	Number of train images: 485
+	Dataset enlarge ratio: 1
+	Batch size per gpu: 8
+	World size (gpu number): 1
+	Require iter number per epoch: 61
+	Total epochs: 246; iters: 15000.
+2024-09-12 17:37:48,569 INFO: Dataset Dataset_PairedImage - ValSet is created.
+2024-09-12 17:37:48,569 INFO: Number of val images/folders in ValSet: 15
+2024-09-12 17:37:48,569 INFO: Set pretrain_network_g to /home/zgj/code2/B1/1-master/experiments111/1_LOL_v1/models/net_g_1000.pth
+2024-09-12 17:37:48,592 INFO: Loading 1 model from /home/zgj/code2/B1/1-master/experiments111/1_LOL_v1/models/net_g_1000.pth.
+2024-09-12 17:37:48,617 INFO: Model [ImageCleanModel] is created.
+2024-09-12 17:37:48,641 INFO: Resuming training from epoch: 16, iter: 1000.
+2024-09-12 17:37:48,642 INFO: best psnr: 0 from iteration 0
+2024-09-12 17:37:48,819 INFO: Start training from epoch: 16, iter: 1000
+2024-09-12 17:37:49,269 INFO: 
+ Updating Patch_Size to 128 and Batch_Size to 1 
+
+2024-09-12 17:38:14,021 INFO: [Retin..][epoch: 24, iter:   1,500, lr:(2.003e-04,)] [eta: 0:11:23, time (data): 0.039 (0.001)] l_pix: 5.7880e-02 
+2024-09-12 17:38:38,013 INFO: [Retin..][epoch: 32, iter:   2,000, lr:(2.005e-04,)] [eta: 0:10:41, time (data): 0.040 (0.002)] l_pix: 1.3456e-01 
+2024-09-12 17:38:38,013 INFO: Saving models and training states.
+2024-09-12 17:38:40,352 INFO: Validation ValSet,		 # psnr: 19.4857
+2024-09-12 17:39:04,994 INFO: [Retin..][epoch: 40, iter:   2,500, lr:(2.007e-04,)] [eta: 0:10:35, time (data): 0.040 (0.001)] l_pix: 7.4585e-02 
+2024-09-12 17:39:30,748 INFO: [Retin..][epoch: 49, iter:   3,000, lr:(2.010e-04,)] [eta: 0:10:12, time (data): 0.042 (0.002)] l_pix: 1.8020e-01 
+2024-09-12 17:39:30,748 INFO: Saving models and training states.
+2024-09-12 17:39:32,922 INFO: Validation ValSet,		 # psnr: 19.9873
+2024-09-12 17:39:58,683 INFO: [Retin..][epoch: 57, iter:   3,500, lr:(2.014e-04,)] [eta: 0:09:57, time (data): 0.042 (0.002)] l_pix: 6.3528e-02 
+2024-09-12 17:40:24,249 INFO: [Retin..][epoch: 65, iter:   4,000, lr:(2.019e-04,)] [eta: 0:09:30, time (data): 0.042 (0.001)] l_pix: 2.0575e-01 
+2024-09-12 17:40:24,250 INFO: Saving models and training states.
+2024-09-12 17:40:26,371 INFO: Validation ValSet,		 # psnr: 19.6389
+2024-09-12 17:40:52,493 INFO: [Retin..][epoch: 74, iter:   4,500, lr:(2.023e-04,)] [eta: 0:09:11, time (data): 0.043 (0.002)] l_pix: 8.6217e-02 
+2024-09-12 17:41:18,083 INFO: [Retin..][epoch: 82, iter:   5,000, lr:(2.029e-04,)] [eta: 0:08:43, time (data): 0.050 (0.002)] l_pix: 1.1215e-01 
+2024-09-12 17:41:18,085 INFO: Saving models and training states.
+2024-09-12 17:41:20,264 INFO: Validation ValSet,		 # psnr: 20.3184
+2024-09-12 17:41:45,999 INFO: [Retin..][epoch: 90, iter:   5,500, lr:(2.035e-04,)] [eta: 0:08:20, time (data): 0.039 (0.002)] l_pix: 1.0132e-01 
+2024-09-12 17:42:12,270 INFO: [Retin..][epoch: 99, iter:   6,000, lr:(2.041e-04,)] [eta: 0:07:54, time (data): 0.047 (0.002)] l_pix: 3.4768e-02 
+2024-09-12 17:42:12,270 INFO: Saving models and training states.
+2024-09-12 17:42:14,431 INFO: Validation ValSet,		 # psnr: 17.8273
+2024-09-12 17:42:40,497 INFO: [Retin..][epoch:107, iter:   6,500, lr:(2.048e-04,)] [eta: 0:07:30, time (data): 0.045 (0.002)] l_pix: 4.5702e-02 
+2024-09-12 17:43:06,682 INFO: [Retin..][epoch:115, iter:   7,000, lr:(2.056e-04,)] [eta: 0:07:03, time (data): 0.050 (0.002)] l_pix: 9.0589e-02 
+2024-09-12 17:43:06,683 INFO: Saving models and training states.
+2024-09-12 17:43:08,864 INFO: Validation ValSet,		 # psnr: 19.1948
+2024-09-12 17:43:35,418 INFO: [Retin..][epoch:124, iter:   7,500, lr:(2.064e-04,)] [eta: 0:06:40, time (data): 0.043 (0.002)] l_pix: 4.3229e-02 
+2024-09-12 17:44:01,677 INFO: [Retin..][epoch:132, iter:   8,000, lr:(2.073e-04,)] [eta: 0:06:12, time (data): 0.050 (0.002)] l_pix: 3.1580e-02 
+2024-09-12 17:44:01,678 INFO: Saving models and training states.
+2024-09-12 17:44:03,848 INFO: Validation ValSet,		 # psnr: 19.7255
+2024-09-12 17:44:30,198 INFO: [Retin..][epoch:140, iter:   8,500, lr:(2.082e-04,)] [eta: 0:05:47, time (data): 0.038 (0.001)] l_pix: 7.7540e-02 
+2024-09-12 17:44:57,192 INFO: [Retin..][epoch:149, iter:   9,000, lr:(2.091e-04,)] [eta: 0:05:21, time (data): 0.047 (0.002)] l_pix: 2.1063e-01 
+2024-09-12 17:44:57,193 INFO: Saving models and training states.
+2024-09-12 17:44:59,474 INFO: Validation ValSet,		 # psnr: 21.0190
+2024-09-12 17:45:26,063 INFO: [Retin..][epoch:157, iter:   9,500, lr:(2.102e-04,)] [eta: 0:04:55, time (data): 0.045 (0.002)] l_pix: 7.0865e-02 
+2024-09-12 17:45:52,446 INFO: [Retin..][epoch:165, iter:  10,000, lr:(2.112e-04,)] [eta: 0:04:28, time (data): 0.042 (0.001)] l_pix: 7.4333e-02 
+2024-09-12 17:45:52,446 INFO: Saving models and training states.
+2024-09-12 17:45:54,640 INFO: Validation ValSet,		 # psnr: 20.7339
+2024-09-12 17:46:21,994 INFO: [Retin..][epoch:174, iter:  10,500, lr:(2.123e-04,)] [eta: 0:04:03, time (data): 0.045 (0.002)] l_pix: 2.6985e-01 
+2024-09-12 17:46:49,173 INFO: [Retin..][epoch:182, iter:  11,000, lr:(2.135e-04,)] [eta: 0:03:36, time (data): 0.042 (0.002)] l_pix: 9.9829e-02 
+2024-09-12 17:46:49,174 INFO: Saving models and training states.
+2024-09-12 17:46:51,551 INFO: Validation ValSet,		 # psnr: 21.3359
+2024-09-12 17:47:19,141 INFO: [Retin..][epoch:190, iter:  11,500, lr:(2.146e-04,)] [eta: 0:03:10, time (data): 0.045 (0.002)] l_pix: 1.8026e-01 
+2024-09-12 17:47:46,843 INFO: [Retin..][epoch:199, iter:  12,000, lr:(2.159e-04,)] [eta: 0:02:43, time (data): 0.046 (0.002)] l_pix: 1.1845e-01 
+2024-09-12 17:47:46,844 INFO: Saving models and training states.
+2024-09-12 17:47:49,031 INFO: Validation ValSet,		 # psnr: 20.2064
+2024-09-12 17:48:15,752 INFO: [Retin..][epoch:207, iter:  12,500, lr:(2.171e-04,)] [eta: 0:02:16, time (data): 0.045 (0.002)] l_pix: 6.2967e-02 
+2024-09-12 17:48:42,587 INFO: [Retin..][epoch:215, iter:  13,000, lr:(2.184e-04,)] [eta: 0:01:48, time (data): 0.040 (0.001)] l_pix: 1.7259e-01 
+2024-09-12 17:48:42,587 INFO: Saving models and training states.
+2024-09-12 17:48:44,775 INFO: Validation ValSet,		 # psnr: 20.7530
+2024-09-12 17:49:12,116 INFO: [Retin..][epoch:224, iter:  13,500, lr:(2.198e-04,)] [eta: 0:01:21, time (data): 0.045 (0.002)] l_pix: 2.1986e-01 
+2024-09-12 17:49:38,888 INFO: [Retin..][epoch:232, iter:  14,000, lr:(2.212e-04,)] [eta: 0:00:54, time (data): 0.045 (0.002)] l_pix: 2.3937e-02 
+2024-09-12 17:49:38,888 INFO: Saving models and training states.
+2024-09-12 17:49:41,082 INFO: Validation ValSet,		 # psnr: 20.9295
+2024-09-12 17:50:07,302 INFO: [Retin..][epoch:240, iter:  14,500, lr:(2.226e-04,)] [eta: 0:00:27, time (data): 0.045 (0.002)] l_pix: 7.6821e-02 
+2024-09-12 17:50:36,402 INFO: [Retin..][epoch:249, iter:  15,000, lr:(2.240e-04,)] [eta: 0:00:00, time (data): 0.046 (0.002)] l_pix: 6.2961e-02 
+2024-09-12 17:50:36,403 INFO: Saving models and training states.
+2024-09-12 17:50:38,559 INFO: Validation ValSet,		 # psnr: 19.2861
+2024-09-12 17:50:38,565 INFO: End of training. Time consumed: 0:12:49
+2024-09-12 17:50:38,565 INFO: Save the latest model.
+2024-09-12 17:50:40,757 INFO: Validation ValSet,		 # psnr: 19.2851
