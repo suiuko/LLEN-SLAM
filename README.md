@@ -29,10 +29,10 @@
 
 ### Ours
 
-| Folder (test datasets) | PSNR        | SSIM       | LPIPS      | Results       | Weights Path             |
-| ------------------ | ----------- | ---------- | ---------- | ------- | ----------- | -------------- |
-| (LOLv1)<br />v1    | 25.441431     |  0.824064   | ** |  **    |          | LOLv1.pth         |
-| (LOLv2)<br />v2    | 28.329210    |  0.877992   | **  | **    |          | LOLv2.pth         |
+| Folder (test datasets) | PSNR       	 | SSIM       | LPIPS      | Results       | Weights Path             |
+| ------------------ | -----------		 | ---------- | ---------- 	| ------- 		| ----------- | 
+| (LOLv1)<br />v1    | 25.441431    	 |  0.824064   | ** |  **    |          | LOLv1.pth         |
+| (LOLv2)<br />v2    | 28.329210    	|  0.877992   | **  | **    |          | LOLv2.pth         |
 
 ### Compare LOLv1 datasets
 
