@@ -29,10 +29,10 @@
 
 ### Ours
 
-| Folder (test datasets)   | PSNR        | SSIM       | LPIPS      | Results       | Weights Path             |
+| Folder (test datasets) | PSNR        | SSIM       | LPIPS      | Results       | Weights Path             |
 | ------------------ | ----------- | ---------- | ---------- | ------- | ----------- | -------------- |
-| (LOLv1)<br />v1        | 25.441431     |  0.824064   | **   **    |          | LOLv1.pth         |
-| (LOLv2)<br />v2        | 28.329210    |  0.877992   | **   **    |          | LOLv2.pth         |
+| (LOLv1)<br />v1    | 25.441431     |  0.824064   | ** |  **    |          | LOLv1.pth         |
+| (LOLv2)<br />v2    | 28.329210    |  0.877992   | **  | **    |          | LOLv2.pth         |
 
 ### Compare LOLv1 datasets
 
@@ -40,29 +40,29 @@ It should be noted that the following assessment is not fine-tuned and is conduc
 
 |   Model name       | PSNR        | SSIM        | LPIPS        | 			Weights Path       |
 | ------------------ | ----------- | ---------- | ----------  | ------------------------ |
-| **Ours_v1**        | 25.441431   	  |  0.824064    |   X         | LOLv1/net_g_1500.pth         |
-| HVI-CIDNet       	 | 21.61     	  |  0.793     | 0.217        |  LOLv1\My_model\epoch_best.pth  |
-| retinexformer      | 21.798    	  |  0.802     | X            |  LOLv1\My_model\best_psnr_21.96_27000.pth  |
-| URetinex-Net       | 21.32(Official) |     X      | X             |  LOLv1\Official_model\ckpt  |
-| GASD     	  | 26.232 |  0.8519     |   X    |  ~~LOLv1\My_model~~  |
-| LYT—NET     		 | 25.4462 	|   0.8307    | X            |  ~~LOLv1\My_model~~  |
-| KinD++     		  |  15.6506	|     0.5079      | 0.2555             |  ~~LOLv1\My_model~~  |
-| Diffusion Low Light   |  21.651	|     0.8056      | 0.1768            |  ~~LOLv1\My_model~~  |
+| **Ours_v1**        | 25.441431   	  |  0.824064   	 |   X         | LOLv1/net_g_1500.pth         |
+| HVI-CIDNet       	 | 21.61     	  |  0.793   		  | 0.217        |  LOLv1\My_model\epoch_best.pth  |
+| retinexformer      | 21.798    	  |  0.802   		  | X            |  LOLv1\My_model\best_psnr_21.96_27000.pth  |
+| URetinex-Net       | 21.32(Official) |     X     		 | X             |  LOLv1\Official_model\ckpt  |
+| GASD     	 		 | 26.232 			|  0.8519    	 |   X  			  |  ~~LOLv1\My_model~~  |
+| LYT—NET     		 | 25.4462 			|   0.8307  	  | X         		   |  ~~LOLv1\My_model~~  |
+| KinD++     		  |  15.6506		|     0.5079      | 0.2555             |  ~~LOLv1\My_model~~  |
+| Diffusion Low Light   |  21.651		|     0.8056      | 0.1768            |  ~~LOLv1\My_model~~  |
 
 
 You can get pth on [Google drive](https://drive.google.com/drive/folders/1L7V2KOsgav5qFgU4CzwiNcC_OBz2OeQK?usp=sharing)
 ### Compare LOLv1 datasets official numerical value
 
 |   Model name       | PSNR        | SSIM        | LPIPS      | 
-| ----------------- | ----------- | ---------- | ---------- |---------- |
+| ----------------- | ----------- | ---------- | ---------- |
 | **Ours_v1**        | 20.9049   	  |  0.7718    |   X         |  
 | HVI-CIDNet       	 | 23.500     	  |  0.8703     | 0.1053       | 
 | retinexformer      | 25.154    	  |  0.8445     | X           |  
-| URetinex-Net       | 21.32 |     X      | X           | 
-| GSAD     	  | 27.623|  0.874     |   0.0912    |  
-| LYT—NET      		 | 26.6280 |   0.8349    | X           |   
-| KinD++     		  |  X |    X    |     X   |   
-| Diffusion Low Light   |  26.047	|     0.8445      | 0.1184           |  
+| URetinex-Net       | 21.32 		|     X     	 | X           | 
+| GSAD     	 		 | 27.623		|  0.874    	 |   0.0912    |  
+| LYT—NET      		 | 26.6280 		|   0.8349   	 | X           |   
+| KinD++     		  |  X 			|    X    		 |     X   |   
+| Diffusion Low Light   |  26.047	|     0.8445      | 0.1184   |  
 
 ### Training log
 |   Model name      |           comment			 |  
