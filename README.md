@@ -7,6 +7,8 @@
 
 ## 💡 News 新闻
 
+- **2024.10.03** V2.3 on Epoch 870/1500, have PSNR: 26087951, SSIM: 0.793044 on SID
+- **2024.10.03** For the SID, SMID, SDSD data sets, we reworked these data sets.
 - **2024.09.26** V2.3 on Epoch 370/1500, have PSNR: 28.329210, SSIM: 0.877992 on LOL_v2
 - **2024.09.23** V2.1.1 version in epoch150, PSNR:25.5085, SSIM:0.8311 on LOL_v1
 - **2024.09.21** V2.0-6variate version in epoch150, PSNR:25.429, SSIM:0.8292
@@ -118,6 +120,9 @@ pip install -r requirements.txt
 Currently only the LOLv1 database is tested
 
 - [LOLv1](https://daooshee.github.io/BMVC2018website/)
+
+Note: 
+(1) For the SID, SMID, SDSD data sets, we reworked these data sets. Convert the `.npy` file to an RGB file, which can be downloaded if you want to use the reconstructed data set.
 
 <details open> <summary>datasets (click to expand)</summary>
   
